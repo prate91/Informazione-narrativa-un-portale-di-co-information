@@ -1,0 +1,292 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{guit}
+\usepackage{csquotes}
+\usepackage{indentfirst}
+\usepackage[bibstyle=authoryear,citestyle=authoryear-comp]{biblatex}
+\addbibresource{Seminario.bib}
+\pagestyle{plain}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headheight}{40pt} 
+
+\begin{document}
+
+\title{\bf Informazione narrativa: un portale di \textit{co-information}}
+
+\author{Nicolò Pratelli}
+
+\date{5 settembre 2018}
+
+\maketitle
+
+\thispagestyle{fancy}
+
+\begin{center}
+Seminario di cultura digitale\\
+Corso di laurea magistrale in Informatica umanistica\\
+Anno accademico 2017/2018
+
+\end{center}
+
+\vspace{1cm}
+\begin{abstract}
+La società contemporanea è continuamente scossa dal problema delle \textit{fake news} e della post-verità. Questa relazione cerca di analizzare lo stato delle cose e proporre un’idea che affronti e tenti di risolvere il problema. La soluzione proposta non è delineata totalmente, ma è presentata con le sua fondamenta di pensiero. Si parte dal presupposto che ognuno deve mettersi in gioco e collaborare con gli altri per costruire insieme un nuovo modo di fare e assorbire informazioni. Il sistema è basato sul concetto di comunità che collaborano alla realizzazione di narrative, appoggiandosi a una piattaforma che è capace di mettere in contatto e fornire gli strumenti necessari.
+\end{abstract}
+
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introduzione}
+
+ Il 2016 è stato un anno da segnare negli almanacchi per l’enorme sconcerto che ha portato nel mondo. Il referendum per l’uscita dall’Europa del Regno Unito, l’elezione del presidente degli Stati Uniti d’America e, più in piccolo, il referendum costituzionale in Italia hanno evidenziato un grave problema nella discussione politica a livello mondiale. Un ruolo di primaria importanza lo hanno avuto i \textit{social media}, come veicolo di informazione, svelando agli occhi dei più alcune gravi crepe nel sistema di informazione mondiale.
+ 
+ Queste crepe, accentuate dalle nuove tecnologie comunicative, hanno sempre fatto parte dell’umanità, poiché, per sua natura, l’uomo non può essere libero da condizionamenti nel suo approccio alla realtà. Infatti ogni persona ha delle inclinazioni personali, dei bias direbbero gli psicologi cognitivi. In un articolo di Buisiness insider \parencite{lee_20_nodate} si può trovare un’immagine che riassume 20 bias che ci condizionano nelle nostre scelte. Di seguito, sono presentati tre%
+ \footnote{Sono stati messi in evidenza solamente questi 3 concetti poiché collegati direttamente all’argomento trattato, ma sono interessanti e rilevanti anche altri bias, come il bias del carro vincitore, il bias dell’autoesaltazione, l’illusione della frequenza, l’illusione dello schema, l’effetto struzzo e il bias della scelta solidale.} di queste venti definizioni, che spiegano come ci autoinganniamo quando giudichiamo situazioni o persone, oppure facciamo delle scelte.
+ 
+ \vspace{0.5cm}
+ 
+ \textit{Bias dell’ancoraggio}. Le persone sono troppo dipendenti dal primo pezzo di informazione che sentono. In una trattativa, chi fa la prima offerta stabilisce una serie di possibilità ragionevoli nella mente di ogni persona coinvolta.
+ 
+ \vspace{0.5cm}
+ 
+ \textit{Bias di disponibilità}. Le persone sopravvalutano l’importanza delle informazioni a loro disposizione. Una persona potrebbe obiettare che il fumo non è nocivo perché conosce qualcuno che ha vissuto fino a 100 anni e ha fumato tre pacchetti al giorno.
+ 
+ \vspace{0.5cm}
+ 
+ \textit{Bias di conferma}. Tendiamo ad ascoltare solo le informazioni che confermano i nostri preconcetti, una delle tante ragioni per cui è così difficile avere una conversazione intelligente sul cambiamento climatico.
+ 
+ \vspace{0.5cm}
+ 
+ Questi schemi mentali si frappongono sempre fra noi e la realtà con cui abbiamo a che fare quotidianamente, filtrando tutte le informazioni che elaboriamo, anche se spesso crediamo di poterli evitare. Infatti, un altro bias importante è quello dell’angolo cieco, che ci fa credere di essere immuni da questi schemi mentali.
+ 
+ Oltre ai condizionamenti psicologici, dobbiamo analizzare anche una serie di altri fattori: lo spostamento del mercato pubblicitario che ha posto sullo stesso piano giornalisti e \textit{influencer}, la disintermediazione nell’approccio alle informazioni e la polarizzazione delle opinioni. Questi tre problemi hanno amplificato e reso, forse, più reale il problema.
+ 
+ Un nuovo termine che si è affermato recentemente è \textit{influencer}. Sul dizionario Treccani \footcite{noauthor_influencer_nodate} viene riportata la seguente definizione: “Personaggio popolare in Rete, che ha la capacità di influenzare i comportamenti e le scelte di un determinato gruppo di utenti e, in particolare, di potenziali consumatori, e viene utilizzato nell’ambito delle strategie di comunicazione e di marketing”. Naturalmente, non possiamo affermare che i giornalisti siano esattamente sullo stesso piano, ma possiamo sostenere che le dinamiche pubblicitarie hanno costretto le testate giornalistiche ad adattarsi alle dinamiche dei \textit{social media}, per ottenere visibilità e garantirsi delle entrate. Di conseguenza, le notizie vengono sempre di più fruite attraverso questi nuovi \textit{media}, dove la figura del giornalista fa fatica a ottenere autorevolezza.
+ 
+ Nello specifico, è progredito il concetto di disntermediazione. Non viene più avvertita la necessità di avere un intermediario: se voglio prenotare un viaggio, non devo più rivolgermi all’agenzia di viaggio, ma posso farlo da solo. Lo vediamo con l’esplosione degli \textit{e-commerce}, ma anche dei blog e delle testate \textit{online}, dove può essere pubblicato qualsiasi tipo di contenuto, senza passare al vaglio di direttori, figure scientifiche o editor professionisti. Conseguenza di tutto questo è un calo di fiducia nella figura dell’esperto. Ne è evidenza il calo delle vaccinazioni, ma in generale il nuovo rapporto tra scienza e politica. Il calo di fiducia nella figura istituzionale dell’esperto di informazioni ha svuotato la discussione portandola a un livello dove si procede per slogan, dove chi urla più forte attira maggiormente l’attenzione.
+ 
+L’ultimo contetto interessante è la polarizzazione delle idee, che si chiudono in quelle che vengono definite \textit{echo chamber}. Scorrendo i \textit{feed} di Facebook, mi sono soffermato su di un articolo che mi ha fatto riflettere. Il Giornale\footcite{noauthor_ultime_nodate}, testata che \textit{online} spesso (come ormai quasi tutte le altre) produce titoli \textit{clickbait}%
+\footnote{Che hanno lo scopo di attirare l’attenzione e incoraggiare le persone a fare clic su collegamenti a determinati siti web\parencite{noauthor_clickbait_nodate}.} e notizie faziose per fidelizzare e garantire agli inserzionisti un pubblico, ha fatto un breve articolo\footcite{cartaldo_ecco_nodate}, dando voce ad Annalisa Camilli, giornalista di Internazionale presente sulla nave di Open Arms. Il caso è quello della migrante salvata dal mare con lo smalto sulle unghie, che ha generato una feroce diatriba sui \textit{social media}. I commentatori del post, infatti, continuavano a sostenere che lo smalto fosse presente prima del salvataggio e non, come dichiarato dalla Camilli, che fosse stato messo sulla nave. Rimanendo, così, della propria opinione, cioè che i naufragi siano tutti una montatura. Anche se più plausibile di un enorme complotto internazionale, ma in contrasto con le proprie idee, si rifiutavano di accettare questa opinione. Questo si accorda con la posizione sostenuta da \textcite{nyhan_when_2010} con la ricerca \textit{When Correction Fail: The persistence of Political Misperceprions}: di fronte a informazioni false o errate è più facile rafforzare il proprio punto di vista preesistente che modificare le proprie percezioni. Il \textit{debunking}, secondo questa opinione, risulta quindi un’attività ingenua perché inefficace nei confronti di chi, guidato dalla propria ragione, non è disposto ad accettare altre opinioni.
+ 
+ Per questo progetto dobbiamo quindi partire da un altro presupposto, diverso da quello che si è affermato negli ultimi anni. Infatti, esistono già molti siti di \textit{debunking}, che hanno scopi molto nobili e offrono alla comunità un servizio utilissimo. Purtroppo però, come sostenuto dallo studio \textit{Debunking in a World of Tribes} di \textcite{zollo_debunking_2017}, si è visto che questa attività non attira coloro a cui è rivolta, ma solamente chi è già in linea con questo tipo di narrazione. Serve perciò che si ribalti il problema e lo si analizzi da un altro punto di vista, introducendo un meccanismo che rompa con l’attuale sistema e riporti la conversazione a un livello superiore, lontano dalla condivisione virale e la polarizzazione delle idee. In questo nuovo tipo di fare informazione dobbiamo posizionare un punto fermo fin dall’inizio: la fiducia nelle capacità umane, intese come intelligenza e generosità. Fissato questo, possiamo costruire una comunità di persone che vogliano realizzare una nuova narrativa, in autonomia, cercando di rompere quel sistema che forse da soli non si è in grado di cambiare.
+ 
+ Affronteremo, quindi, il problema del \textit{debunking}, cercando di sviscerare i concetti che ne stanno alla base e che cosa viene fatto per contrastare questi fenomeni dilaganti (capitolo ~\ref{sec:prob-deb}). Successivamente introdurremo il concetto di \textit{co-information}, inteso come collaborazione e progetto di vita (capitolo ~\ref{sec:co-inf}), per poi passare a presentare un’idea di soluzione al problema (capitolo ~\ref{sec:inf-nar}). Passeremo poi da uno dei possibili punti di partenza per la diffusione del sistema proposto (capitolo ~\ref{sec:scuo-part}) e analizzeremo un punto fermo che è stato posto: la rinuncia alla politica del \textit{like} (capitolo ~\ref{sec:sup-feed}). Infine verrà presentata una proposta di sostenibilità economica del progetto (capitolo ~\ref{sec:sost-prog}), anche se ancora sotto forma di bozza, prima di procedere con le conclusioni (capitolo ~\ref{sec:concl}).
+
+\section{Il problema del \textit{debunking}}
+\label{sec:prob-deb}
+
+Prima di entrare nel merito di quello che viene fatto per contrastare il dilagante fenomeno di diffusione di notizie false e bufale, è necessario prendere confidenza con alcuni termini del dominio. 
+
+Il primo concetto dal quale è necessario partire è quello di bufala. Oltre a essere fattivamente la traduzione italiana di \textit{fake news} è anche uno dei pochi termini che incontreremo nella nostra lingua. Molti, infatti, utilizzano i due termini come sinonimi anche se probabilmente c’è una piccola sfumatura che li differenzia. Il vocabolario online della Treccani\footcite{noauthor_treccani_nodate} definisce le \textit{fake news} come “notizie false, con particolare riferimento a quelle diffuse mediante la Rete”, mentre la bufala è una “svista, errore madornale; affermazione falsa, inverosimile; panzana”. Nonostante le due definizioni siano accumunate dalla parola “falsa”, si può leggere una variazione di significato derivata dalla consapevolezza nella condivisione. Perciò le \textit{fake news} saranno affermazioni false, create e diffuse da persone consapevoli della loro non esattezza, mentre le bufale diffuse da persone inconsapevoli della loro inesattezza. In realtà, successivamente, nel meccanismo di condivisione, tutte le \textit{fake news} finiscono per rientrare nella definizione di bufale, diffuse da persone non legate ai creatori, che le prendono per vere.
+
+Un altro concetto, legato ai precedenti e che non si può trascurare di citare, è quello di post-verità (o \textit{post-truth}). Eletta dall’\textit{Oxford English Dictionary} parola dell’anno 2016, quindi legata con un doppio filo all’elezione del presidente degli Stati Uniti d’America e al referendum per la \textit{Brexit}, ha avuto un’esplosione d’uso proprio due anni fa, ma ha faticato a imporsi nell’uso italiano, al contrario del più celebre sintagma \textit{fake news}. Fatica che è comunque relativa, poiché questo lessema è entrato ormai, come calco, a far parte dell’uso quotidiano con il significato di “relativo a, o che denota, circostanze nelle quali fatti obiettivi sono meno influenti nell’orientare la pubblica opinione che gli appelli all’emotività e le convinzioni personali”. La definizione appare ancora più calzante se si pensa alla realtà della comunicazione con cui abbiamo a che fare tutti i giorni e alle recenti esplosioni di movimenti \#NoVax e alla propaganda contro i migranti.
+
+Adesso dobbiamo introdurre quei termini di dominio che si sono imposti per cercare di limitare i due fenomeni precedentemente introdotti. Si tratta di due termini inglesi che però sono entrati a far parte dell’uso italiano: il \textit{fact checking} e il \textit{debunking}. 
+
+Il primo è una verifica dei fatti (tradotto spesso anche con verifica delle fonti), eseguita con metodo rigoroso. Nel giornalismo l’ideale sarebbe eseguirlo a monte della pubblicazione della notizia, ma spesso viene eseguito a posteriori, oppure da persone diverse dai giornalisti, poiché è un’attività costosa in un conesto nel quale serve pubblicare molte notizie per ottenere molti click. 
+
+Il \textit{debunking} (letteralmente lo smontaggio) è la pratica di mettere in dubbio o smentire, basandosi su metodologie scientifiche, affermazioni false, esagerate, antiscientifiche, quindi è basata sull’attività di \textit{fact checking}. Negli ultimi anni questa attività è stata eseguita da persone o gruppi di persone che per hobby o per missione hanno deciso di occupersene, aprendo siti, gruppi o pagine su Facebook. In sostanza è avvenuto un cambio di responsabilità, da sempre in mano alle testate giornalistiche e quindi a monte, si è passati a realizzarla sulle notizie pubblicate, quindi a valle.
+
+Tra i tanti siti che, in Italia e nel mondo, si occupano di queste questioni passeremo in rassegna solamente alcuni siti e gruppi nostrani. Nel panorama italiano emergono principalmente \textit{BUTAC}\footcite{noauthor_butac_nodate},  \textit{bufale.net}\footcite{noauthor_bufale.net_nodate} e il blog \textit{il Disinformatico}\footcite{noauthor_paolo_nodate} di Paolo Attivissimo. Oltre a questi verrà passato in rassegna anche un altro canale di comunicazione, diverso dal sito web: il \textit{debunking} attraverso i \textit{social media} con il gruppo facebook \textit{LE BUFALE SU FACEBOOK: NON CASCATECI!!! - GRUPPO ANTI BUFALE}\footcite{noauthor_bufale_nodate}.
+ 
+Tutte le realtà che abbiamo elencato funzionano grazie a una comunità che aiuta a segnalare le notizie a esperti del settore che si avvalgono delle proprie capacità per dimostrare e poi diffondere la (non) fondatezza di queste notizie.
+
+Di seguito verranno analizzati più nel dettaglio i singoli servizi di \textit{debunking} partendo dalla breve autodescrizione degli amministratori. Si differenzia da tutti il blog di Attivissimo, poiché un blog personale più che un servizio di anti-bufale, anche se recentemente si è ingrandito.
+
+\vspace{0.5cm}
+
+\textbf{BUTAC - Bufale un tanto al chilo}
+
+\begin{quote} 
+Il nostro vuol esser un blog fatto con passione, la passione per l’informazione corretta, la passione per la verità. Cerchiamo di scovare quelle che sono le false informazioni veicolate online, ma anche sui giornali e in televisione, e proviamo a sbufalarle o renderle più chiare! Non vogliamo fare polemiche politiche o ideologiche, ma solo porre davanti a tutto scienza e correttezza d’informazione. Contiamo sull’aiuto di tutti nel segnalare nuove bufale da controllare…sperando nel frattempo d’incuriosirvi ad approfondire gli argomenti trattati!
+\end{quote}
+
+Il sito BUTAC nasce su Facebook e si trasferisce successivamente su di un pagina web, sotto forma di blog. Lo scopo è quello di “porre davanti a tutto scienza e correttezza d’informazione”, sostanzialmente una missione a servizio degli utenti. Degna di nota è la blacklist con dentro, suddivisi per argomento, tutti i siti o i blog da evitare. Interessante è anche vedere come, nella presentazione, sia chiaro fin da subito lo scopo educativo del progetto, natura intrinseca di quasi tutti i siti di \textit{debunking}.
+
+\vspace{0.5 cm}
+
+\textbf{Bufale.net}
+
+\begin{quote} 
+Bufale.net è un blog creato da persone comuni, gente che non si considera esperta in alcun settore specifico, nè medico, nè scientifico, nè aereo-spaziale…
+
+Cerchiamo, tuttavia, di usare la testa per capire se una notizia è alterata, falsa, presentata in maniera diversa…insomma una se una notizia è una BUFALA (o FAKE NEWS).
+
+Non ci ergiamo a portatori della verità assoluta, ma attraverso questo blog, esprimiamo le nostre idee ed i nostri punti di vista, ai quali siete liberi di credere o meno.
+Cerchiamo di essere neutrali, pazienti e cortesi.
+
+Anche se alcuni di noi hanno un credo politico o religioso cerchiamo di evitare che esso traspaia negli articoli. Uno staff di circa 70 persone, con le quali ci confrontiamo, è per noi la garanzia di una pluralità di ideologie e convinzioni che cerchiamo di riportare in ogni nostro pezzo. Chiunque voglia far parte del nostro staff, ci può scrivere, per verificare di persona.
+
+Quando rispondete ai nostri articoli, cercate di non allargare il discorso: state sulla NEWS/ARTICOLO… se smentiamo una notizia o un video, non diciamo che l’argomento trattato è Falso o Vero, ma ci limitiamo ALLA SOLA NOTIZIA.
+\end{quote}
+
+Aprendo questo sito la prima cosa che salta all’occhio è la pubblicità invasiva. Superata quella, il sito non appare subito intuitivo come BUTAC, anche se punta sulla semplicità, mettendo in primo piano le notizie. Anche loro forniscono una \textit{blacklist}, utile nelle intenzioni, ma poco nella pratica, poiché nell’uso quotidiano è difficile andare a consultare la lista ogni volta che apriamo un collegamento da Facebook.
+In questo caso è molto interessante come si dichiarano non esperti di niente, ma comunque capaci di discernere una notizia vera da una bufala (usando la testa). Anche per loro si tratta di una missione al servizio della collettività.
+
+\vspace{0.5 cm}
+
+\textbf{Il Disinformatico}
+
+Recentemente si è ingrandito, aprendo un vero e proprio sito web, che fa da indice ai blog e ai servizi gestiti da Paolo Attivissimo. Il blog si dicosta sia dai casi precedenti che da quelli che vedremo successivamente, perché nato come blog personale come raccolta e racconto delle passione dell’autore. Si è trasformato con il tempo in un archivio di antibufale, anche se mantiene la struttura del blog e continua a trattare altri argomenti. Tra gli altri progetti curati dal giornalista informatico italo-inglese è degno di nota Bufalopedia\footcite{attivissimo_bufalopedia:_nodate}, un blog che ambisce, come si vede dal nome, a diventare un punto di riferimento come archivio di bufale.
+
+\vspace{0.5 cm}
+
+\textbf{LE BUFALE SU FACEBOOK: NON CASCATECI!!! - GRUPPO ANTI BUFALE}
+
+\begin{quote}
+Il Gruppo anti bufale / anti bufala su Facebook (e non solo) si occupa prevalentemente:
+\begin{itemize}
+\item di verificare quello che gira su Facebook (avvisi, notizie, appelli, fotomontaggi, applicazioni, video ecc.)
+\item di come funziona Facebook in generale (con riguardo particolare alla gestione della privacy)
+\item di altri social network quando è il caso.
+\end{itemize}
+
+Qui “bufala” è il termine che utilizziamo per indicare tutto ciò che INGANNA gli utenti (fino ad arrivare alla truffa, allo scam, al phishing, all’hacking ecc.) tramite Facebook o altri social network/siti in rete.
+Siamo qui per verificare e spiegare. Per condividere “cultura di rete” e per fare e diffondere “cultura digitale”.
+Siamo qui per imparare ad usare CONSAPEVOLMENTE gli strumenti della rete.
+\end{quote}
+
+Il gruppo facebook si discosta leggermente dagli altri due siti web. Lasciando da parte il titolo in \textit{capslock}, che si discosta poco dai titoloni attira utenti, anche in questo caso però lo scopo educativo è messo in luce fin da subito. La differenza con gli altri siti è un’interazione con la comunità di utenti più evidente, più in superficie. Ogni utente può, oltre che segnalare le notizie, interagire direttamente con gli altri. Questa caratteristica è molto interessante, poiché denota un’attenzione posta più sull’utente che sugli amministratori. Infatti gli altri utenti possono intervenire nelle discussioni e dire la propria opinione, sostituendosi (spesso) al ruolo dell’esperto. Sebbene da un lato l’interazione tra utenti sia un punto a favore, la qualità della conversazione è decisamente scadente, tipica delle dinamiche di Facebook, evidenti nei commenti sotto alle notizie. Di conseguenza gli utenti assumo atteggiamenti negativi, offensivi o di superiorità, rendendo poco produttiva la discussione.  Questo evidenzia maggiormente un problema comune a tutti, cioè l’attesa della risposta dall’alto, che pacifica la discussione.
+
+\vspace{0.5 cm}
+
+In generale, si nota come tutti i servizi di \textit{debunking} abbiano intrinsecamente definito lo scopo di educare i “cattivi” utenti alla buona pratica. In realtà, come già scritto nell’introduzione, gli utenti segnalatori sono anche i consumatori e i “cattivi” da educare non partecipano mai al banchetto. E se lo fanno non cambiano idea. Lo scopo nobile del \textit{debunking} finisce quindi per cadere nell’ingenuità. Anche perché la passività dell’utente, che attende la soluzione e non si mette in gioco, non si discosta dal comportamento dell’utente che non è in linea con questo tipo di narrativa. Con questo non intendo dire che il \textit{debunking} sia un’attività inutile, anzi, da consumatore ne apprezzo l’intento e gli sforzi. Non è necessario che questi servizi cessino di esistere, ma  serve pensare al problema da un’altra prospettiva coinvolgendo maggiormente l’utente e facendolo diventare il protagonista, invece che il passivo utilizzatore.
+
+\section{Il concetto di \textit{co-information}}
+\label{sec:co-inf}
+
+Il punto fermo che è stato posto è quello di avere fiducia nell’intelligenza e generosità dell’essere umano. Non possiamo però cadere nell’errore di considerare solamente il singolo individuo, ma dobbiamo pensare che la forza deve emergere dalla collaborazione di più persone. Emergono quindi delle forme sociali che intrettengono relazioni abbastanza lunghe e che acquistano caratteristiche comuni. Chiamiamo questi aggregati di persone comunità. Questo è il concetto più importante di tutta l’idea e \textcite{manzini_politiche_2018} le distingue da alcuni tratti in comune:
+
+\vspace{0.5 cm}
+
+\textit{La possibilità di scegliere.} I partecipanti non lo fanno per trovare una soluzione o avere una identità precostituita, ma per costruire con gli altri le proprie soluzioni e la propria identità mediante scelte e negoziazioni.
+
+\vspace{0.5 cm}
+
+\textit{Uno spazio di opportunità.} Devono la loro essenza alla qualità e alla densità di scambio con gli altri, attraverso conversazioni e incontri.
+
+\vspace{0.5 cm}
+
+\textit{Una costruzione per parti.} Proprio a partire dagli incontri tra le persone e tra le persone e i luoghi che si costruiscono le relazioni di cui sono fatte. 
+
+\vspace{0.5 cm}
+
+\textit{Un’attività di rigenerazione continua.} Serve un lavoro progettuale continuo per mantenerne nel tempo l’esistenza.
+
+\vspace{0.5 cm}
+
+\textit{La formazione di coalizioni.} Nelle comunità si aggregano coalizioni che lavorano attivamente per mettere in pratica le idee prodotte dalla collaborazione e attuarle.
+
+\vspace{0.5 cm}
+
+\textit{Comunità in ambienti ibridi.} Ci sono le comunità di scopo, supportate da una piattaforma digitale che ne facilita le diverse attività e le comunità di interessse basate su una piattaforma digitale che permette di in contatto e attivare intorno a un tema un gran numero di individui che altrimenti non avrebbero avuto modo di incontrarsi, di confrontare esperienze e di produrre conoscenze e visioni condivise.
+
+\vspace{0.5 cm}
+
+L’importanza del concetto di comunità è evidente. Lo è altrettanto il fatto che queste vadano a essere le molecole del progetto. Formate da atomi di utenti, che si mettono insieme, a sua volta stipulano legami altrettanto forti per creare strutture più grandi. Lo fanno però con una differenza, una scelta consapevole, sia di quello che sono, sia di quello che vogliono essere. Gli ambienti dentro al quale vogliamo che si costituiscano e crescano è un ambiente ibrido che permette di mettere in contatto tra di loro le persone, una piattaforma controllata con uno scopo condiviso, quello di informarsi insieme.
+
+L’altro elemento dell’idea sono proprio le persone. Lo sforzo che sono costretti a fare è importante per non continuare a subire passivamente le informazioni. Serve che ognuno inizi a fare una scelta consapevole, ma soprattutto serve che ognuno agisca. In altre parole è necessario che un utente diventi progettista della propria vita, sfruttando quelle capacità propriamente umane: il senso critico, la creatività, la capacità di analisi e il senso pratico. La prima ci permette di capire che cosa non ci va bene nella realtà, la seconda di immaginare come vorremmo che fosse, la terza di riconoscere e valutare i vincoli nei quali siamo immersi e, infine, la quarta per mettere in pratica, conosciuti i vincoli, la realtà che ci siamo immaginati. Questa capacità progettuale deve essere utilizzata per evadere dalla realtà provando a rompere con la logica dominante e collaborando con gli altri invece che competere, guardandoli con empatia, invece che come nemici. Questo modo di operare deve nascere come scelta consapevole di ogni individuo ed è il presupposto di quello che intendiamo per \textit{co-information}. 
+
+Possiamo confrontarlo con il concetto di \textit{cohousing}: un modo di vivere la casa, il quartiere e la città condividendo spazi e servizi, in una cornice di mutuo aiuto e buon vicinato. Presente in tutte le epoche e culture abitative, non rappresenta più l’ovvio, ma è considerato come innovazione sociale. Allo stesso modo, l’informazione collettiva, dove la qualità della conversazione è posta al centro, dove l’offesa reciproca e la chiusura mentale spariscono e dove il metodo torna a essere alla base dell'informazione, diventa un terreno di innovazione sociale. In questo contesto si cerca di offrire il modo e gli strumenti per chi ha interesse a essere coinvolto in un progetto di vita diverso da quello in cui tutte le persone cercano di arrivare a quei pochissimi parametri (per quasi tutti irraggiungibili) di valutazione sociale: soldi, potere, successo e prestanza fisica.
+
+\section{Informazione narrativa}
+\label{sec:inf-nar}
+
+I siti di \textit{debunking} analizzati, anche se sono una parte di quelli presenti nel panorama italiano e mondiale, sono strutturati nel seguente modo: un esperto (o un insieme di esperti) si occupa di trovare (segnalate da una comunità di utenti) delle notizie e chiarire i dubbi che ci possono essere su di esse (seguendo metodi rigorosi). Questo sistema è statico, nel senso che i ruoli sono definiti a priori, ma ben consolidato nella realtà del web. L’utente/lettore segnala la notizia, l’esperto fa il lavoro, altri lettori arrivano come utenti passivi. Infatti, se l’utente è più in stretto contatto con il debunker è più propenso ad accettare le correzioni \parencite{margolin_political_2018}. Inoltre, si pongono come strumenti di rivelazione e diffusione di verità. Anche se analizzano le notizie con metodi rigorosi, provocano nell’utente a cui sono in teoria rivolti, quello da “rieducare”, un \textit{backfire effect} \parencite{nyhan_when_2010}, cioè un effetto di rinforzo delle proprie credenze. Di fatto, falliscono nel proprio scopo, poiché solamente l’utente già predisposto a mettere in dubbio la notizia letta finisce per accogliere la smentita.
+
+Il progetto proposto si stacca da questa realtà per due motivi. Il primo è che si pone come uno strumento di informazione e non di verità. Il secondo è che nasce come un sistema di formazione di pensiero e non di educazione alla verità, nel quale si devono realizzare delle narrazioni: un modo diverso per formarsi e informarsi insieme. Proprio per questo le narrazioni vengono costruite insieme a una comunità di utenti e non da esperti. Se da un lato si può intravedere il pericolo di isolamento delle varie comunità, la piattaforma serve proprio per creare quei legami tra comunità che \textcite{granovetter_strength_1973} definisce legami deboli, ma che sono gli unici che riescono a mettere in contatto realtà quasi chiuse.
+
+\vspace{0.5 cm}
+
+\textbf{L’utente.} Ponendo l’interesse sulla persona che si informa, la prima parola chiave è l’utente, l’unità minima del sistema. Ogni utente che decide di aderire al progetto deve rinunciare a qualcosa, ma allo stesso tempo avere qualcosa. Per funzionare c’è bisogno di un atto di coraggio: il pegno che viene chiesto è la rinuncia all’interazione con le notizie sui \textit{social media}. In questo caso interazione significa condivisione, mi piace, commento, \textit{retweet}. Infatti questi media sono diventati la principale fonte di informazione per molti ed è necessario provare a inserirsi in mezzo a questo flusso di informazioni incontrollate. Oltre alla rinuncia solitaria, viene chiesto all’utente di aggregarsi a una comunità già esistente o creare una propria comunità.
+
+\vspace{0.5 cm}
+
+\textbf{La comunità.} Il secondo punto da chiarire è il significato di comunità in questo dominio. Successivamente passeremo al concetto di costruzione di una comunità. Per comunità si intende qualsiasi forma sociale composta, ma registrata nella piattaforma. Un individuo da solo non forma una comunità, ma due persone con qualcosa in comune già bastano per formare una comunità. Di conseguenza non parliamo di una sola comunità ma di tante comunità collegate fra loro che discutono e conversano partendo dalle informazioni e dalle narrazioni sul portale.
+
+La costruzione della comunità è il punto più delicato del progetto. Infatti una comunità non può essere radicata solamente sul portale e la discussione avvenire solamente tramite canali digitali. È necessario che la comunità si rapporti e si radichi sul territorio. Esiste poi una piattaforma, che è il pretesto e lo strumento per mettere in contatto fra di loro le persone e le comunità, per creare una rete di comunità, ma prima ancora una rete di persone.
+
+\vspace{0.5 cm}
+
+\textbf{Le verifica delle fonti} Questo passaggio è uno dei più importanti, ma meno scontati. Identificare le fonti attendibili non è un lavoro facile e serve un livello di istruzione abbastanza avanzato. Poiché la piattaforma è aperta a tutti gli utenti, per poter superare questo ostacolo serve collaborazione. Il sistema mette a disposizione degli strumenti per facilitare gli utenti. Seguendo l'esempio di Wikipedia si possono mettere a disposizione delle linee guida per la selezione delle fonti \parencite{noauthor_wikipedia:fonti_2018}:
+\begin{quote}
+Le fonti attendibili sono quelle pubblicate da editori o autori considerati affidabili e autorevoli in relazione al soggetto in esame: questa precisazione è particolarmente importante, poiché una fonte (un sito, un libro, e così via) non va considerata attendibile in sé, ma in relazione a ciò per cui viene usata. Così, per esempio, il sito di un partito sarà (salvo casi particolari) fonte attendibile per lo statuto di quel partito, non lo sarà per la descrizione degli eventuali problemi giudiziari dei suoi membri.
+
+Le pubblicazioni attendibili sono quelle con una struttura definita che consente il controllo delle informazioni e le revisioni editoriali o dei pari. L’attendibilità di una fonte dipende poi dal contesto: un celebre astronomo non è una fonte attendibile per ciò che concerne la politica monetaria. In generale, una voce dovrebbe utilizzare fonti il più possibile attendibili, pubblicate e appropriate per tentare di coprire la maggior parte dei punti di vista pubblicati (includendo proporzionalmente le minoranze significative), e rispettando sempre un punto di vista neutrale.
+\end{quote}
+
+Il punto fondamentale è che le narrazioni siano costruite in maniera scientifica, per affermare e tentare di dimostrare il proprio punto di vista.
+
+\vspace{0.5 cm}
+
+\textbf{La piattaforma} Gli utenti, di conseguenza le comunità, si appoggiano a una piattaforma in rete che mette a disposizione strumenti per mettersi in contatto con le comunità, per informarsi e per creare delle discussioni sulle notizie e, successivamente, delle narrazioni a partire da esse. Gli strumenti sono a disposizione di tutti.
+
+\vspace{0.5 cm}
+
+\textbf{Le narrazioni} Il fulcro del progetto sono le narrazioni: ognuno può dare ad esse la forma che vuole, ma sostanzialmente sono delle nuove notizie. Possono essere costruite da una fonte esterna, da una narrazione interna o da una discussione emersa dalla comunità. Il punto chiave delle narrazioni è che devono essere metodologicamente corrette, seguendo le linee guida messe a disposizione dalla piattaforma. Devono quindi essere sostenute da delle fonti, non necessariamente primarie, ma attendibili. Ogni narrazione può ribaltare il punto di vista di un’altra, aggiungendo valore alla narrazione inziale. Gli utenti in questo modo costruiscono la propria informazione e non la subiscono più, dando un taglio netto alla tradizione giornalistica.
+
+\vspace{0.5 cm}
+
+\textbf{Il sito web} La piattaforma si appoggia a un sito web, sotto al quale c’è una base di conoscenza, che mette a disposizione della collettività le narrazioni e le notizie.
+
+Il sito è l’interfaccia tra la piattaforma e gli utenti esterni. Attraverso di esso chiunque può iscriversi al portale e partecipare al progetto, ma può anche solamente consultare le narrative delle comunità. Però per poter interagire è necessario iscriversi al servizio, accedere a una comunità e partecipare alle discussioni. 
+
+\vspace{0.5 cm}
+
+\textbf{Estensione per browser e applicazione mobile} Con questa ultima funzionalità si chiude il cerchio. Infatti il progetto mette a disposizione, di tutti gli utenti che desiderano installarla, un’estensione per il browser (Firefox, Chrome, Safari) e un’applicazione mobile (Android e IOS), che si possono scaricare gratuitamente dalle piattaforme apposite.
+
+\vspace{0.5 cm}
+
+La funzionalità di queste applicazioni è proprio quella di pungolare l’utente continuamente. Queste applicazioni tengono il conto delle interazioni con le notizie (sbandierando in faccia all’utente la richiesta iniziale) e si inseriscono in mezzo a questa operazione. Utilizzando la base di conoscenza si apre un pop-up che mostra all’utente la sua violazione della promessa e gli chiede se vuole proseguire nell’interazione o partecipare a una narrativa sull’argomento.
+
+\section{La scuola come punto di partenza per le prime comunità}
+\label{sec:scuo-part}
+
+ Se pensiamo a un luogo, radicato sul territorio, che coinvolge una grossa fetta della popolazione italiana, intersecando generazioni ed etnie diverse, dobbiamo pensare obbligatoriamente alla scuola. Non è l’unico, ma è uno dei punti dai quali dobbiamo partire se vogliamo costruire le comunità. La collaborazione con le scuole deve essere uno dei punti di partenza per la diffusione della piattaforma presso il pubblico. In questo caso esce fuori l’anima formativa del progetto, si cerca di inserire nella catena educativa, non per insegnare qualcosa a qualcuno (che nella maggior parte dei casi nemmeno lo recepisce), ma per costruire insieme l’educazione a un certo metodo narrativo e di discussione. Con questo significato l’inserimento nelle scuole acquista sempre più importanza, acquisendo un forte valore sociale e politico. 
+ 
+ La scuola è importante proprio perché coinvolge trasversalmente persone di età diverse e non solamente il binomio studenti-insegnanti. Dalle comunità scolastiche si possono aggiungere, come dei grappoli, tutte le famiglie coinvolte, aggiungendo narrazioni e punti di vista diversi. Proprio per la sua natura intrinseca di istituzione diastratica e diacronica è l’istituzione sociale più adatta per fare da punto di partenza per una diffusione capillare. 
+ 
+ Non dobbiamo dare per scontato che sia l’unica istituzione. Sono diffuse sul territorio una infinità di comunità che possono essere coinvolte. Gruppi sociali che in questo modo potrebbero convogliare le informazioni prodotti e avere una propria visibilità, assolvendo a quel ruolo che già hanno. Dai gruppi studenteschi ai gruppi di lettura, ogni forma sociale o  comunità spontanea è adatta a essere candidatta e aggregarsi al sistema. L’importante è sottostare alle regole, senza rifugiarsi in luoghi chiusi, caratteristica che viene offerta dalla piattaforma, dove ogni punto di vista può essere messo in discussione.
+
+\section{Il superamento del \textit{feedback}}
+\label{sec:sup-feed}
+
+Uno dei meccanismi che ha alimentato la polarizzazione e le \textit{echo chameber} è il \textit{feedback} sotto forma di \textit{like}, in tutte le sue sfaccettature. Questa semplificazione della realtà porta dentro un rischio enorme, proprio per la sua facilità di utilizzo, e non aiuta il formarsi di un opinione. L’applicazione per \textit{smartphone} e l’estensione del \textit{browser} aiutano a limitare questo fenomeno diffuso, ma ciò non basta. Infatti, è necessario estrometterlo da tutte le dinamiche della piattaforma. Sarebbe molto facile prevedere un sistema per il quale le narrazioni degli altri possono essere votate, facendone crescere la visibilità. Questo però romperebbe tutte le fondamenta su cui è basato il sistema, buttando giù la struttura che vi è stata costruita. 
+
+Allo stesso modo, il \textit{feedback} sotto forma di recensione, è altrettanto problematico. Proprio per il meccanismo del bias di conferma, che è stato introdotto precedentemente, recensioni di narrazioni porterebbero alla polarizzazione delle opinioni, dove gli utenti leggerebbero solamente le recensioni per trovarne una vicina alla propria opinione. 
+
+Questi metodi devono essere superati, rilanciando come \textit{feedback} una nuova narrazione, completa in tutto e per tutto, senza semplificazioni. Solamente così si può sperare di alzare il livello della conversazione. 
+
+\section{Sostenibilità del progetto}
+\label{sec:sost-prog}
+
+ Il servizio non è gratuito. Il costo è condizione necessaria per mantenere l’utente consapevole che il servizio che sta utilizzando ha un costo di gestione e che se ne fa un cattivo uso spreca dei soldi. Allo stesso tempo però se si vogliono consultare le narrative, scaricare e installare l’applicazione e l’estensione del browser lo si può fare gratuitamente. Anche l’iscrizione al portale è gratuita, ma solamente per un periodo di prova. Dopo questo lasso di tempo è richiesta una cifra bassa per continuare a utilizzare il servizio. Il costo è di 120 euro all’anno, divisibili in un canone mensile di 10 euro. Il costo è veramente basso e si possono avere degli sconti se si è creatori di una comunità e si portano persone nel servizio. Naturalmente per i progetti nelle scuole sono previsti degli accordi particolari tra le istituzioni e il portale.
+
+Il costo potrebbe scoraggiare molte persone, ma in confronto alla rinuncia iniziale è meno gravante. Infatti vengono richiesti poco più di 30 centesimi al giorno, ovvero lo sforzo di rinunciare a un caffè (del distributore automatico) al giorno, rispetto allo sforzo di rinunciare alle interazioni sui \textit{social media}.
+
+\section{Conclusioni}
+\label{sec:concl}
+
+L’idea di fondo nasce proprio dall’esigenza che non possiamo più fruire le informazioni da soli attraverso gli slogan di Twitter o di Facebook. Serve uno sforzo a partire dal basso per alzare la qualità della discussione. Evidentemente per una conversazione serve essere in molti, ma è necessario svincolarsi dai limiti imposti dalla rete e dai social network. Per fare questo si deve alimentare di fisicità la conversazione, portandola fuori dal virtuale, senza però rinunciarvi totalmente. Una soluzione proposta è, quindi, quella di creare una piattaforma dove non ci informiamo più da soli leggendo la notizia, ma lo facciamo con gli altri, discutendone per creare una propria narrazione che poi verrà caricata sul portale e che diventerà materia utile per alimentera la conversazione degli altri. In questo modo è rovesciato il concetto di \textit{debunking}, l’informazione viene costruita dalla comunità attraverso un processo di conversazione e discussione. Non si deve più cercare di convincere l’altro con la propria posizione, ma metterla in discussione per arrivare a un punto successivo. Le discussioni sterili dei commenti su facebook devono essere sostituite da nuove narrazioni, nuovi punti di vista che riducano il \textit{gap} della polarizzazione in \textit{echo chamber}.
+
+Per tornare all’esempio iniziale: a partire dalla notizia della naufraga con lo smalto sulle unghie possiamo liberamente scrivere come pensiamo sia successo, ma portando delle prove basate su delle fonti (affidabili). La narrazione deve essere il frutto di una discussione tra una comunità (che può essere qualsiasi forma sociale), per esempio con la nostra famiglia.
+
+Quello che ne esce fuori è una narrazione nuova, diversa dalla notizia, che arricchisce il patrimonio di chi la legge e di chi la produce.
+
+\nocite{quattrociocchi_liberi_2018}
+
+\printbibliography[heading=bibintoc]
+
+
+\end{document}
